@@ -8,8 +8,12 @@ import { bankAccounts } from "../data/data";
 
 export function getAllClientNames(array) {
   let arr = [];
-  for (let i = 0; i < [bankAccounts]; i++) {}
 
+  for (let i = 0; i < array.length; i++) {
+    arr.push(array[i].name);
+  }
+
+  return arr;
 }
 
 // === TEST YOURSELF ===
