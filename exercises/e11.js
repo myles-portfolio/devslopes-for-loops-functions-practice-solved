@@ -20,7 +20,6 @@ export function getAllWithdrawals(array) {
   }
   
  return arr; 
-
 }
 
 // === TEST YOURSELF ===
