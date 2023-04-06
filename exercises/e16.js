@@ -6,8 +6,17 @@
 // NOTE: You can NOT use the array.flat() method in your code
 
 export function flatArrays(array) {
-  // Your code goes here...
+  let arr = [];
 
+  for (let i = 0; i < array.length; i++) {
+    if (Array.isArray(array[i])) {
+      const flatten = flatArrays(array[i]);
+      arr.push(...flatten);
+    } else {
+      arr.push(array[i]);
+    }
+  }
+  return arr;
 }
 
 
