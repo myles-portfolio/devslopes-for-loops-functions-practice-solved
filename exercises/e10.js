@@ -9,14 +9,21 @@ export function getClientsWithLetterInName(array, letter) {
   for (let i = 0; i < array.length; i++) {
     let accountHolderName = array[i].name;
     let lowercaseAccountHolderName = accountHolderName.toLowerCase();
+    let hasLetter = false;
     
-    if(lowercaseAccountHolderName.includes(letter)) {
-			arr.push(accountHolderName);
+    for (let j = 0; j < lowercaseAccountHolderName.length; j++) {
+      if (lowercaseAccountHolderName.charAt(j) === letter.toLowerCase()) {
+        hasLetter = true;
+        break;
+      }
+    }
+  
+    if (hasLetter) {
+      arr.push(accountHolderName);
     } 
   }
   
  return arr; 
-
 }
 
 // === TEST YOURSELF ===
